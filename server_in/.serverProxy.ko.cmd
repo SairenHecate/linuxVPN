@@ -1,0 +1,1 @@
+cmd_/root/server_tunnel/serverProxy.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000  --build-id  -T ./scripts/module-common.lds -o /root/server_tunnel/serverProxy.ko /root/server_tunnel/serverProxy.o /root/server_tunnel/serverProxy.mod.o;  true
