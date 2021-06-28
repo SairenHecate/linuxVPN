@@ -1,0 +1,36 @@
+
+
+*
+* Visual Studio Code Server
+*
+* Reminder: You may only use this software with Visual Studio family products,
+* as described in the license https://aka.ms/vscode-remote/license
+*
+
+Extension host agent listening on 38283
+
+[15:05:45] Extension host agent started.
+[15:05:46] [127.0.0.1][9f63d0a7][ManagementConnection] New connection established.
+[15:05:46] [127.0.0.1][359940a1][ExtensionHostConnection] New connection established.
+[15:05:46] [127.0.0.1][359940a1][ExtensionHostConnection] <994> Launched Extension Host Process.
+[15:12:50] [127.0.0.1][359940a1][ExtensionHostConnection] <994> Extension Host Process exited with code: null, signal: SIGTERM.
+Last EH closed, waiting before shutting down
+[15:12:50] Last EH closed, waiting before shutting down
+[15:12:50] [127.0.0.1][359940a1][ExtensionHostConnection] Unknown reconnection token.
+[15:12:50] [127.0.0.1][9f63d0a7][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+Got delay-shutdown request while in shutdown timeout, delaying
+[15:13:22] Got delay-shutdown request while in shutdown timeout, delaying
+Cancelling previous shutdown timeout
+[15:13:22] Cancelling previous shutdown timeout
+[15:13:24] [127.0.0.1][c799dceb][ManagementConnection] New connection established.
+[15:13:24] [127.0.0.1][a8e67c13][ExtensionHostConnection] New connection established.
+[15:13:24] [127.0.0.1][a8e67c13][ExtensionHostConnection] <2502> Launched Extension Host Process.
+[IPC Library: Pty Host]  INFO Persistent process "2": Replaying 1048576 chars and 2 size events
+New EH opened, aborting shutdown
+[15:18:22] New EH opened, aborting shutdown
+[20:58:37] [127.0.0.1][c799dceb][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[20:58:38] [127.0.0.1][a8e67c13][ExtensionHostConnection] <2502> Extension Host Process exited with code: 0, signal: null.
+Last EH closed, waiting before shutting down
+[20:58:38] Last EH closed, waiting before shutting down
+Last EH closed, shutting down
+[21:03:38] Last EH closed, shutting down

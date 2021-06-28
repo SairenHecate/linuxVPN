@@ -1,0 +1,463 @@
+
+
+*
+* Visual Studio Code Server
+*
+* Reminder: You may only use this software with Visual Studio family products,
+* as described in the license https://aka.ms/vscode-remote/license
+*
+
+Extension host agent listening on 36519
+
+[11:19:15] Extension host agent started.
+[11:19:15] [127.0.0.1][c97214bd][ManagementConnection] New connection established.
+[11:19:15] [127.0.0.1][9845eea1][ExtensionHostConnection] New connection established.
+[11:19:15] [127.0.0.1][9845eea1][ExtensionHostConnection] <5377> Launched Extension Host Process.
+[11:19:17] *
+[11:19:17] baseEnv {
+  USER: 'root',
+  SSH_CLIENT: '218.197.153.231 56053 22',
+  XDG_SESSION_TYPE: 'tty',
+  SHLVL: '0',
+  MOTD_SHOWN: 'pam',
+  HOME: '/root',
+  LOGNAME: 'root',
+  _: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/node',
+  XDG_SESSION_CLASS: 'user',
+  XDG_SESSION_ID: '427',
+  PATH: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/bin:/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin',
+  VSCODE_AGENT_FOLDER: '/root/.vscode-server',
+  XDG_RUNTIME_DIR: '/run/user/0',
+  LANG: 'en_US.UTF-8',
+  SHELL: '/bin/bash',
+  PWD: '/root',
+  SSH_CONNECTION: '218.197.153.231 56053 172.24.218.3 22',
+  VSCODE_INJECT_NODE_MODULE_LOOKUP_PATH: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/remote/node_modules',
+  VSCODE_CWD: '/root',
+  LS_COLORS: '',
+  LESSCLOSE: '/usr/bin/lesspipe %s %s',
+  LESSOPEN: '| /usr/bin/lesspipe %s',
+  VSCODE_LOG_NATIVE: 'false',
+  VSCODE_AMD_ENTRYPOINT: 'vs/server/remoteExtensionHostProcess',
+  VSCODE_PIPE_LOGGING: 'true',
+  VSCODE_VERBOSE_LOGGING: 'true',
+  VSCODE_EXTHOST_WILL_SEND_SOCKET: 'true',
+  VSCODE_HANDLES_UNCAUGHT_ERRORS: 'true',
+  VSCODE_LOG_STACK: 'false',
+  VSCODE_NLS_CONFIG: '{"locale":"en","availableLanguages":{}}',
+  BROWSER: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/bin/helpers/browser.sh'
+}
+[11:19:17] *
+[11:19:17] baseEnv {
+  USER: 'root',
+  SSH_CLIENT: '218.197.153.231 56053 22',
+  XDG_SESSION_TYPE: 'tty',
+  SHLVL: '0',
+  MOTD_SHOWN: 'pam',
+  HOME: '/root',
+  LOGNAME: 'root',
+  _: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/node',
+  XDG_SESSION_CLASS: 'user',
+  XDG_SESSION_ID: '427',
+  PATH: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/bin:/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin',
+  VSCODE_AGENT_FOLDER: '/root/.vscode-server',
+  XDG_RUNTIME_DIR: '/run/user/0',
+  LANG: 'en_US.UTF-8',
+  SHELL: '/bin/bash',
+  PWD: '/root',
+  SSH_CONNECTION: '218.197.153.231 56053 172.24.218.3 22',
+  VSCODE_INJECT_NODE_MODULE_LOOKUP_PATH: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/remote/node_modules',
+  VSCODE_CWD: '/root',
+  LS_COLORS: '',
+  LESSCLOSE: '/usr/bin/lesspipe %s %s',
+  LESSOPEN: '| /usr/bin/lesspipe %s',
+  VSCODE_LOG_NATIVE: 'false',
+  VSCODE_AMD_ENTRYPOINT: 'vs/server/remoteExtensionHostProcess',
+  VSCODE_PIPE_LOGGING: 'true',
+  VSCODE_VERBOSE_LOGGING: 'true',
+  VSCODE_EXTHOST_WILL_SEND_SOCKET: 'true',
+  VSCODE_HANDLES_UNCAUGHT_ERRORS: 'true',
+  VSCODE_LOG_STACK: 'false',
+  VSCODE_NLS_CONFIG: '{"locale":"en","availableLanguages":{}}',
+  BROWSER: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/bin/helpers/browser.sh'
+}
+[11:19:21] [127.0.0.1][c97214bd][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[11:19:22] [127.0.0.1][9845eea1][ExtensionHostConnection] <5377> Extension Host Process exited with code: 0, signal: null.
+Last EH closed, waiting before shutting down
+[11:19:22] Last EH closed, waiting before shutting down
+Got delay-shutdown request while in shutdown timeout, delaying
+[11:19:39] Got delay-shutdown request while in shutdown timeout, delaying
+Cancelling previous shutdown timeout
+[11:19:39] Cancelling previous shutdown timeout
+[11:19:39] [127.0.0.1][f47c995d][ManagementConnection] New connection established.
+[11:19:39] [127.0.0.1][1fab5470][ExtensionHostConnection] New connection established.
+[11:19:39] [127.0.0.1][1fab5470][ExtensionHostConnection] <5485> Launched Extension Host Process.
+[11:19:41] *
+[11:19:41] baseEnv {
+  USER: 'root',
+  SSH_CLIENT: '218.197.153.231 56053 22',
+  XDG_SESSION_TYPE: 'tty',
+  SHLVL: '0',
+  MOTD_SHOWN: 'pam',
+  HOME: '/root',
+  LOGNAME: 'root',
+  _: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/node',
+  XDG_SESSION_CLASS: 'user',
+  XDG_SESSION_ID: '427',
+  PATH: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/bin:/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin',
+  VSCODE_AGENT_FOLDER: '/root/.vscode-server',
+  XDG_RUNTIME_DIR: '/run/user/0',
+  LANG: 'en_US.UTF-8',
+  SHELL: '/bin/bash',
+  PWD: '/root',
+  SSH_CONNECTION: '218.197.153.231 56053 172.24.218.3 22',
+  VSCODE_INJECT_NODE_MODULE_LOOKUP_PATH: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/remote/node_modules',
+  VSCODE_CWD: '/root',
+  LS_COLORS: '',
+  LESSCLOSE: '/usr/bin/lesspipe %s %s',
+  LESSOPEN: '| /usr/bin/lesspipe %s',
+  VSCODE_LOG_NATIVE: 'false',
+  VSCODE_AMD_ENTRYPOINT: 'vs/server/remoteExtensionHostProcess',
+  VSCODE_PIPE_LOGGING: 'true',
+  VSCODE_VERBOSE_LOGGING: 'true',
+  VSCODE_EXTHOST_WILL_SEND_SOCKET: 'true',
+  VSCODE_HANDLES_UNCAUGHT_ERRORS: 'true',
+  VSCODE_LOG_STACK: 'false',
+  VSCODE_NLS_CONFIG: '{"locale":"en","availableLanguages":{}}',
+  BROWSER: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/bin/helpers/browser.sh'
+}
+[11:19:41] *
+[11:19:41] baseEnv {
+  USER: 'root',
+  SSH_CLIENT: '218.197.153.231 56053 22',
+  XDG_SESSION_TYPE: 'tty',
+  SHLVL: '0',
+  MOTD_SHOWN: 'pam',
+  HOME: '/root',
+  LOGNAME: 'root',
+  _: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/node',
+  XDG_SESSION_CLASS: 'user',
+  XDG_SESSION_ID: '427',
+  PATH: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/bin:/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin',
+  VSCODE_AGENT_FOLDER: '/root/.vscode-server',
+  XDG_RUNTIME_DIR: '/run/user/0',
+  LANG: 'en_US.UTF-8',
+  SHELL: '/bin/bash',
+  PWD: '/root',
+  SSH_CONNECTION: '218.197.153.231 56053 172.24.218.3 22',
+  VSCODE_INJECT_NODE_MODULE_LOOKUP_PATH: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/remote/node_modules',
+  VSCODE_CWD: '/root',
+  LS_COLORS: '',
+  LESSCLOSE: '/usr/bin/lesspipe %s %s',
+  LESSOPEN: '| /usr/bin/lesspipe %s',
+  VSCODE_LOG_NATIVE: 'false',
+  VSCODE_AMD_ENTRYPOINT: 'vs/server/remoteExtensionHostProcess',
+  VSCODE_PIPE_LOGGING: 'true',
+  VSCODE_VERBOSE_LOGGING: 'true',
+  VSCODE_EXTHOST_WILL_SEND_SOCKET: 'true',
+  VSCODE_HANDLES_UNCAUGHT_ERRORS: 'true',
+  VSCODE_LOG_STACK: 'false',
+  VSCODE_NLS_CONFIG: '{"locale":"en","availableLanguages":{}}',
+  BROWSER: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/bin/helpers/browser.sh'
+}
+[11:19:49] *
+[11:19:49] baseEnv {
+  USER: 'root',
+  SSH_CLIENT: '218.197.153.231 56053 22',
+  XDG_SESSION_TYPE: 'tty',
+  SHLVL: '0',
+  MOTD_SHOWN: 'pam',
+  HOME: '/root',
+  LOGNAME: 'root',
+  _: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/node',
+  XDG_SESSION_CLASS: 'user',
+  XDG_SESSION_ID: '427',
+  PATH: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/bin:/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin',
+  VSCODE_AGENT_FOLDER: '/root/.vscode-server',
+  XDG_RUNTIME_DIR: '/run/user/0',
+  LANG: 'en_US.UTF-8',
+  SHELL: '/bin/bash',
+  PWD: '/root',
+  SSH_CONNECTION: '218.197.153.231 56053 172.24.218.3 22',
+  VSCODE_INJECT_NODE_MODULE_LOOKUP_PATH: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/remote/node_modules',
+  VSCODE_CWD: '/root',
+  LS_COLORS: '',
+  LESSCLOSE: '/usr/bin/lesspipe %s %s',
+  LESSOPEN: '| /usr/bin/lesspipe %s',
+  VSCODE_LOG_NATIVE: 'false',
+  VSCODE_AMD_ENTRYPOINT: 'vs/server/remoteExtensionHostProcess',
+  VSCODE_PIPE_LOGGING: 'true',
+  VSCODE_VERBOSE_LOGGING: 'true',
+  VSCODE_EXTHOST_WILL_SEND_SOCKET: 'true',
+  VSCODE_HANDLES_UNCAUGHT_ERRORS: 'true',
+  VSCODE_LOG_STACK: 'false',
+  VSCODE_NLS_CONFIG: '{"locale":"en","availableLanguages":{}}',
+  BROWSER: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/bin/helpers/browser.sh'
+}
+[11:19:52] [127.0.0.1][f47c995d][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[11:19:53] [127.0.0.1][1fab5470][ExtensionHostConnection] <5485> Extension Host Process exited with code: 0, signal: null.
+Cancelling previous shutdown timeout
+[11:19:53] Cancelling previous shutdown timeout
+Last EH closed, waiting before shutting down
+[11:19:53] Last EH closed, waiting before shutting down
+Got delay-shutdown request while in shutdown timeout, delaying
+[11:20:01] Got delay-shutdown request while in shutdown timeout, delaying
+Cancelling previous shutdown timeout
+[11:20:01] Cancelling previous shutdown timeout
+[11:20:02] [127.0.0.1][c97bf52e][ManagementConnection] New connection established.
+[11:20:02] [127.0.0.1][b52afc85][ExtensionHostConnection] New connection established.
+[11:20:02] [127.0.0.1][b52afc85][ExtensionHostConnection] <5594> Launched Extension Host Process.
+[11:20:05] *
+[11:20:05] baseEnv {
+  USER: 'root',
+  SSH_CLIENT: '218.197.153.231 56053 22',
+  XDG_SESSION_TYPE: 'tty',
+  SHLVL: '0',
+  MOTD_SHOWN: 'pam',
+  HOME: '/root',
+  LOGNAME: 'root',
+  _: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/node',
+  XDG_SESSION_CLASS: 'user',
+  XDG_SESSION_ID: '427',
+  PATH: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/bin:/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin',
+  VSCODE_AGENT_FOLDER: '/root/.vscode-server',
+  XDG_RUNTIME_DIR: '/run/user/0',
+  LANG: 'en_US.UTF-8',
+  SHELL: '/bin/bash',
+  PWD: '/root',
+  SSH_CONNECTION: '218.197.153.231 56053 172.24.218.3 22',
+  VSCODE_INJECT_NODE_MODULE_LOOKUP_PATH: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/remote/node_modules',
+  VSCODE_CWD: '/root',
+  LS_COLORS: '',
+  LESSCLOSE: '/usr/bin/lesspipe %s %s',
+  LESSOPEN: '| /usr/bin/lesspipe %s',
+  VSCODE_LOG_NATIVE: 'false',
+  VSCODE_AMD_ENTRYPOINT: 'vs/server/remoteExtensionHostProcess',
+  VSCODE_PIPE_LOGGING: 'true',
+  VSCODE_VERBOSE_LOGGING: 'true',
+  VSCODE_EXTHOST_WILL_SEND_SOCKET: 'true',
+  VSCODE_HANDLES_UNCAUGHT_ERRORS: 'true',
+  VSCODE_LOG_STACK: 'false',
+  VSCODE_NLS_CONFIG: '{"locale":"en","availableLanguages":{}}',
+  BROWSER: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/bin/helpers/browser.sh'
+}
+[11:20:05] *
+[11:20:05] baseEnv {
+  USER: 'root',
+  SSH_CLIENT: '218.197.153.231 56053 22',
+  XDG_SESSION_TYPE: 'tty',
+  SHLVL: '0',
+  MOTD_SHOWN: 'pam',
+  HOME: '/root',
+  LOGNAME: 'root',
+  _: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/node',
+  XDG_SESSION_CLASS: 'user',
+  XDG_SESSION_ID: '427',
+  PATH: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/bin:/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin',
+  VSCODE_AGENT_FOLDER: '/root/.vscode-server',
+  XDG_RUNTIME_DIR: '/run/user/0',
+  LANG: 'en_US.UTF-8',
+  SHELL: '/bin/bash',
+  PWD: '/root',
+  SSH_CONNECTION: '218.197.153.231 56053 172.24.218.3 22',
+  VSCODE_INJECT_NODE_MODULE_LOOKUP_PATH: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/remote/node_modules',
+  VSCODE_CWD: '/root',
+  LS_COLORS: '',
+  LESSCLOSE: '/usr/bin/lesspipe %s %s',
+  LESSOPEN: '| /usr/bin/lesspipe %s',
+  VSCODE_LOG_NATIVE: 'false',
+  VSCODE_AMD_ENTRYPOINT: 'vs/server/remoteExtensionHostProcess',
+  VSCODE_PIPE_LOGGING: 'true',
+  VSCODE_VERBOSE_LOGGING: 'true',
+  VSCODE_EXTHOST_WILL_SEND_SOCKET: 'true',
+  VSCODE_HANDLES_UNCAUGHT_ERRORS: 'true',
+  VSCODE_LOG_STACK: 'false',
+  VSCODE_NLS_CONFIG: '{"locale":"en","availableLanguages":{}}',
+  BROWSER: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/bin/helpers/browser.sh'
+}
+[11:20:13] *
+[11:20:13] baseEnv {
+  USER: 'root',
+  SSH_CLIENT: '218.197.153.231 56053 22',
+  XDG_SESSION_TYPE: 'tty',
+  SHLVL: '0',
+  MOTD_SHOWN: 'pam',
+  HOME: '/root',
+  LOGNAME: 'root',
+  _: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/node',
+  XDG_SESSION_CLASS: 'user',
+  XDG_SESSION_ID: '427',
+  PATH: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/bin:/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin',
+  VSCODE_AGENT_FOLDER: '/root/.vscode-server',
+  XDG_RUNTIME_DIR: '/run/user/0',
+  LANG: 'en_US.UTF-8',
+  SHELL: '/bin/bash',
+  PWD: '/root',
+  SSH_CONNECTION: '218.197.153.231 56053 172.24.218.3 22',
+  VSCODE_INJECT_NODE_MODULE_LOOKUP_PATH: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/remote/node_modules',
+  VSCODE_CWD: '/root',
+  LS_COLORS: '',
+  LESSCLOSE: '/usr/bin/lesspipe %s %s',
+  LESSOPEN: '| /usr/bin/lesspipe %s',
+  VSCODE_LOG_NATIVE: 'false',
+  VSCODE_AMD_ENTRYPOINT: 'vs/server/remoteExtensionHostProcess',
+  VSCODE_PIPE_LOGGING: 'true',
+  VSCODE_VERBOSE_LOGGING: 'true',
+  VSCODE_EXTHOST_WILL_SEND_SOCKET: 'true',
+  VSCODE_HANDLES_UNCAUGHT_ERRORS: 'true',
+  VSCODE_LOG_STACK: 'false',
+  VSCODE_NLS_CONFIG: '{"locale":"en","availableLanguages":{}}',
+  BROWSER: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/bin/helpers/browser.sh'
+}
+[11:20:21] *
+[11:20:21] baseEnv {
+  USER: 'root',
+  SSH_CLIENT: '218.197.153.231 56053 22',
+  XDG_SESSION_TYPE: 'tty',
+  SHLVL: '0',
+  MOTD_SHOWN: 'pam',
+  HOME: '/root',
+  LOGNAME: 'root',
+  _: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/node',
+  XDG_SESSION_CLASS: 'user',
+  XDG_SESSION_ID: '427',
+  PATH: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/bin:/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin',
+  VSCODE_AGENT_FOLDER: '/root/.vscode-server',
+  XDG_RUNTIME_DIR: '/run/user/0',
+  LANG: 'en_US.UTF-8',
+  SHELL: '/bin/bash',
+  PWD: '/root',
+  SSH_CONNECTION: '218.197.153.231 56053 172.24.218.3 22',
+  VSCODE_INJECT_NODE_MODULE_LOOKUP_PATH: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/remote/node_modules',
+  VSCODE_CWD: '/root',
+  LS_COLORS: '',
+  LESSCLOSE: '/usr/bin/lesspipe %s %s',
+  LESSOPEN: '| /usr/bin/lesspipe %s',
+  VSCODE_LOG_NATIVE: 'false',
+  VSCODE_AMD_ENTRYPOINT: 'vs/server/remoteExtensionHostProcess',
+  VSCODE_PIPE_LOGGING: 'true',
+  VSCODE_VERBOSE_LOGGING: 'true',
+  VSCODE_EXTHOST_WILL_SEND_SOCKET: 'true',
+  VSCODE_HANDLES_UNCAUGHT_ERRORS: 'true',
+  VSCODE_LOG_STACK: 'false',
+  VSCODE_NLS_CONFIG: '{"locale":"en","availableLanguages":{}}',
+  BROWSER: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/bin/helpers/browser.sh'
+}
+[11:20:23] *
+[11:20:23] baseEnv {
+  USER: 'root',
+  SSH_CLIENT: '218.197.153.231 56053 22',
+  XDG_SESSION_TYPE: 'tty',
+  SHLVL: '0',
+  MOTD_SHOWN: 'pam',
+  HOME: '/root',
+  LOGNAME: 'root',
+  _: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/node',
+  XDG_SESSION_CLASS: 'user',
+  XDG_SESSION_ID: '427',
+  PATH: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/bin:/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin',
+  VSCODE_AGENT_FOLDER: '/root/.vscode-server',
+  XDG_RUNTIME_DIR: '/run/user/0',
+  LANG: 'en_US.UTF-8',
+  SHELL: '/bin/bash',
+  PWD: '/root',
+  SSH_CONNECTION: '218.197.153.231 56053 172.24.218.3 22',
+  VSCODE_INJECT_NODE_MODULE_LOOKUP_PATH: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/remote/node_modules',
+  VSCODE_CWD: '/root',
+  LS_COLORS: '',
+  LESSCLOSE: '/usr/bin/lesspipe %s %s',
+  LESSOPEN: '| /usr/bin/lesspipe %s',
+  VSCODE_LOG_NATIVE: 'false',
+  VSCODE_AMD_ENTRYPOINT: 'vs/server/remoteExtensionHostProcess',
+  VSCODE_PIPE_LOGGING: 'true',
+  VSCODE_VERBOSE_LOGGING: 'true',
+  VSCODE_EXTHOST_WILL_SEND_SOCKET: 'true',
+  VSCODE_HANDLES_UNCAUGHT_ERRORS: 'true',
+  VSCODE_LOG_STACK: 'false',
+  VSCODE_NLS_CONFIG: '{"locale":"en","availableLanguages":{}}',
+  BROWSER: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/bin/helpers/browser.sh'
+}
+[11:20:27] *
+[11:20:27] baseEnv {
+  USER: 'root',
+  SSH_CLIENT: '218.197.153.231 56053 22',
+  XDG_SESSION_TYPE: 'tty',
+  SHLVL: '0',
+  MOTD_SHOWN: 'pam',
+  HOME: '/root',
+  LOGNAME: 'root',
+  _: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/node',
+  XDG_SESSION_CLASS: 'user',
+  XDG_SESSION_ID: '427',
+  PATH: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/bin:/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin',
+  VSCODE_AGENT_FOLDER: '/root/.vscode-server',
+  XDG_RUNTIME_DIR: '/run/user/0',
+  LANG: 'en_US.UTF-8',
+  SHELL: '/bin/bash',
+  PWD: '/root',
+  SSH_CONNECTION: '218.197.153.231 56053 172.24.218.3 22',
+  VSCODE_INJECT_NODE_MODULE_LOOKUP_PATH: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/remote/node_modules',
+  VSCODE_CWD: '/root',
+  LS_COLORS: '',
+  LESSCLOSE: '/usr/bin/lesspipe %s %s',
+  LESSOPEN: '| /usr/bin/lesspipe %s',
+  VSCODE_LOG_NATIVE: 'false',
+  VSCODE_AMD_ENTRYPOINT: 'vs/server/remoteExtensionHostProcess',
+  VSCODE_PIPE_LOGGING: 'true',
+  VSCODE_VERBOSE_LOGGING: 'true',
+  VSCODE_EXTHOST_WILL_SEND_SOCKET: 'true',
+  VSCODE_HANDLES_UNCAUGHT_ERRORS: 'true',
+  VSCODE_LOG_STACK: 'false',
+  VSCODE_NLS_CONFIG: '{"locale":"en","availableLanguages":{}}',
+  BROWSER: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/bin/helpers/browser.sh'
+}
+[11:20:28] *
+[11:20:28] baseEnv {
+  USER: 'root',
+  SSH_CLIENT: '218.197.153.231 56053 22',
+  XDG_SESSION_TYPE: 'tty',
+  SHLVL: '0',
+  MOTD_SHOWN: 'pam',
+  HOME: '/root',
+  LOGNAME: 'root',
+  _: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/node',
+  XDG_SESSION_CLASS: 'user',
+  XDG_SESSION_ID: '427',
+  PATH: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/bin:/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin',
+  VSCODE_AGENT_FOLDER: '/root/.vscode-server',
+  XDG_RUNTIME_DIR: '/run/user/0',
+  LANG: 'en_US.UTF-8',
+  SHELL: '/bin/bash',
+  PWD: '/root',
+  SSH_CONNECTION: '218.197.153.231 56053 172.24.218.3 22',
+  VSCODE_INJECT_NODE_MODULE_LOOKUP_PATH: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/remote/node_modules',
+  VSCODE_CWD: '/root',
+  LS_COLORS: '',
+  LESSCLOSE: '/usr/bin/lesspipe %s %s',
+  LESSOPEN: '| /usr/bin/lesspipe %s',
+  VSCODE_LOG_NATIVE: 'false',
+  VSCODE_AMD_ENTRYPOINT: 'vs/server/remoteExtensionHostProcess',
+  VSCODE_PIPE_LOGGING: 'true',
+  VSCODE_VERBOSE_LOGGING: 'true',
+  VSCODE_EXTHOST_WILL_SEND_SOCKET: 'true',
+  VSCODE_HANDLES_UNCAUGHT_ERRORS: 'true',
+  VSCODE_LOG_STACK: 'false',
+  VSCODE_NLS_CONFIG: '{"locale":"en","availableLanguages":{}}',
+  BROWSER: '/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/bin/helpers/browser.sh'
+}
+New EH opened, aborting shutdown
+[11:25:01] New EH opened, aborting shutdown
+rejected promise not handled within 1 second: Error: Could not find pty with id "33"
+stack trace: Error: Could not find pty with id "33",    at P._throwIfNoPty (/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/out/vs/platform/terminal/node/ptyHostMain.js:12:49253),    at P.updateTitle (/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/out/vs/platform/terminal/node/ptyHostMain.js:12:46512),    at Object.call (/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/out/vs/platform/terminal/node/ptyHostMain.js:11:8338),    at P.onPromise (/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/out/vs/platform/terminal/node/ptyHostMain.js:10:50875),    at P.onRawMessage (/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/out/vs/platform/terminal/node/ptyHostMain.js:10:50234),    at /root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/out/vs/platform/terminal/node/ptyHostMain.js:10:49487,    at g.fire (/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/out/vs/platform/terminal/node/ptyHostMain.js:8:1835),    at process.W (/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/out/vs/platform/terminal/node/ptyHostMain.js:6:30761),    at process.emit (events.js:315:20),    at emit (internal/child_process.js:903:12),    at processTicksAndRejections (internal/process/task_queues.js:81:21)
+[Error: Could not find pty with id "33",    at P._throwIfNoPty (/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/out/vs/platform/terminal/node/ptyHostMain.js:12:49253),    at P.updateTitle (/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/out/vs/platform/terminal/node/ptyHostMain.js:12:46512),    at Object.call (/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/out/vs/platform/terminal/node/ptyHostMain.js:11:8338),    at P.onPromise (/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/out/vs/platform/terminal/node/ptyHostMain.js:10:50875),    at P.onRawMessage (/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/out/vs/platform/terminal/node/ptyHostMain.js:10:50234),    at /root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/out/vs/platform/terminal/node/ptyHostMain.js:10:49487,    at g.fire (/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/out/vs/platform/terminal/node/ptyHostMain.js:8:1835),    at process.W (/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/out/vs/platform/terminal/node/ptyHostMain.js:6:30761),    at process.emit (events.js:315:20),    at emit (internal/child_process.js:903:12),    at processTicksAndRejections (internal/process/task_queues.js:81:21)]
+[23:52:03] [127.0.0.1][b52afc85][ExtensionHostConnection] The client has reconnected.
+[01:47:25] [127.0.0.1][c97bf52e][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+Error: Unexpected SIGPIPE
+    at process.<anonymous> (/root/.vscode-server/bin/b4c1bd0a9b03c749ea011b06c6d2676c8091a70c/out/bootstrap.js:1:370)
+    at process.emit (events.js:315:20)
+[04:47:16] [127.0.0.1][b52afc85][ExtensionHostConnection] <5594> Extension Host Process exited with code: 0, signal: null.
+Last EH closed, waiting before shutting down
+[04:47:16] Last EH closed, waiting before shutting down
+[04:47:25] [127.0.0.1][c97bf52e][ManagementConnection] The reconnection grace time of 3h has expired, so the connection will be disposed.
+Last EH closed, shutting down
+[04:52:16] Last EH closed, shutting down
