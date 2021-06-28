@@ -153,7 +153,7 @@ my_hook_fun(void* priv, struct sk_buff* skb, const struct nf_hook_state* state)
                skb->len=skb->len-32;
                skb->tail=skb->tail-32;
                memset(payload,0,32);
-               printk("tail[0]-tail[3]%d %d %d %d    28-31:%d %d %d %d ",
+               //printk("tail[0]-tail[3]%d %d %d %d    28-31:%d %d %d %d ",
                payload[0],payload[1],payload[2],payload[3],
                payload[28],payload[29],payload[30],payload[31]);
                //skb->tail 和end 在64位操作系统下不是指针而是相对于head的int偏移量，所以不能用来操作数据
