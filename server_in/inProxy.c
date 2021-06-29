@@ -65,16 +65,7 @@ void printSkb(struct sk_buff* skb){
 unsigned int
 my_hook_fun(void* priv, struct sk_buff* skb, const struct nf_hook_state* state)
 {
-        if(skb->data_len!=0)
-        {       
-                printk("skb->data_len: %d,skb_linearize!",skb->data_len);
-                if(skb_linearize(skb))
-                {
-                        printk("error line skb\r\n");
-                        printk("skb->data_len %d\r\n",skb->data_len);
-                        return NF_DROP;
-                }
-        }
+
     ip_header* iph ;
     tcp_header* tcph;
     udp_header* udph;
@@ -97,18 +88,18 @@ my_hook_fun(void* priv, struct sk_buff* skb, const struct nf_hook_state* state)
                 iph->saddr.byte1==10||
                 iph->saddr.byte1==100||
                 iph->saddr.byte1==198
-                )){
+                ))
+    {
         return NF_ACCEPT;
     }
     if(likely(iph->proto==IPPROTO_TCP||iph->proto==IPPROTO_UDP)){
         iph_len = (iph->ver_ihl & 0xf) * 4;
-        tcph = (tcp_header*)((unsigned char*)iph + iph_len);
+        tcph = (tcp_header*)(iph_uc + iph_len);
         //tcph=(tcp_header*)skb->transport_header;
         int tcpheader_len = ((ntohs((tcph->offsetandflags)) & 0xf000)>>12) * 4;
         unsigned char* tcp_data=(unsigned char*)tcph+tcpheader_len;
         sport=ntohs(tcph->src_port);
         dport=ntohs(tcph->dst_port);
-
         /*实验过程进程有ssh的22 连接*/
         if(likely(ntohs(tcph->dst_port)==22)){
                 return NF_ACCEPT;
@@ -117,25 +108,36 @@ my_hook_fun(void* priv, struct sk_buff* skb, const struct nf_hook_state* state)
         if(dport==123){
                return NF_DROP; 
         }
-        printk(" \n");
-        printk(KERN_INFO "type: %d  %d.%d.%d.%d:%d -> %d.%d.%d.%d:%d len:%d\n",
-            iph->proto,
-            iph->saddr.byte1,
-            iph->saddr.byte2,
-            iph->saddr.byte3,
-            iph->saddr.byte4,
-            sport,
-            iph->daddr.byte1,
-            iph->daddr.byte2,
-            iph->daddr.byte3,
-            iph->daddr.byte4,
-            dport,
-            ntohs(iph->tlen)
-        );
+
         printSkb(skb);
         int payload_local =(int)ntohs(iph->tlen)-32;
         unsigned char* payload=iph_uc+payload_local;
         if(dport==9999||dport==8888){
+                printk(" \n");
+                printk(KERN_INFO "type: %d  %d.%d.%d.%d:%d -> %d.%d.%d.%d:%d len:%d\n",
+                        iph->proto,
+                        iph->saddr.byte1,
+                        iph->saddr.byte2,
+                        iph->saddr.byte3,
+                        iph->saddr.byte4,
+                        sport,
+                        iph->daddr.byte1,
+                        iph->daddr.byte2,
+                        iph->daddr.byte3,
+                        iph->daddr.byte4,
+                        dport,
+                        ntohs(iph->tlen)
+                  );
+                if(skb->data_len!=0)
+                {       
+                        //printk("skb->data_len: %d,skb_linearize!",skb->data_len);
+                        if(skb_linearize(skb))
+                        {
+                                printk("error line skb\r\n");
+                                printk("skb->data_len %d\r\n",skb->data_len);
+                                return NF_DROP;
+                        }
+                }
                 /*int i=0;
                 for(i=0;i<8;i=i+8){
                         printk("%2X %2X %2X %2X   %2X %2X %2X %2X",
@@ -143,40 +145,38 @@ my_hook_fun(void* priv, struct sk_buff* skb, const struct nf_hook_state* state)
                         payload[i+4],payload[i+5],payload[i+6],payload[i+7]);
                 }
                 */
+                printk("payload_local:%d",payload_local);
+                //printk( KERN_INFO "payload[0]== %2X &&payload[1]==%2X ",payload[0],payload[1]);
+                if(payload[0]==0x11&&payload[1]==0x22){
+                        iph->tlen=htons(ntohs(iph->tlen)-32);
+                        //skb_trim(skb,skb->len-32);
+                        skb->len=skb->len-32;
+                        skb->tail=skb->tail-32;
+                        memset(payload,0,32);
+                        //printk("tail[0]-tail[3]%d %d %d %d    28-31:%d %d %d %d ",
+                        //payload[0],payload[1],payload[2],payload[3],
+                        //payload[28],payload[29],payload[30],payload[31]);
+                        //skb->tail 和end 在64位操作系统下不是指针而是相对于head的int偏移量，所以不能用来操作数据
+                        //memset(skb->tail,0,32);
 
-        }
-        printk("payload_local:%d",payload_local);
-        //printk( KERN_INFO "payload[0]== %2X &&payload[1]==%2X ",payload[0],payload[1]);
-        if(payload[0]==0x11&&payload[1]==0x22){
-               iph->tlen=htons(ntohs(iph->tlen)-32);
-               //skb_trim(skb,skb->len-32);
-               skb->len=skb->len-32;
-               skb->tail=skb->tail-32;
-               memset(payload,0,32);
-               //printk("tail[0]-tail[3]%d %d %d %d    28-31:%d %d %d %d ",
-               payload[0],payload[1],payload[2],payload[3],
-               payload[28],payload[29],payload[30],payload[31]);
-               //skb->tail 和end 在64位操作系统下不是指针而是相对于head的int偏移量，所以不能用来操作数据
-               //memset(skb->tail,0,32);
-
-               //skb_trim(skb,skb->len-32);
-                if(skb->sk){
-                        printk(" skb->sk->sk_rcvbuf:%d",skb->sk->sk_rcvbuf);
+                        //skb_trim(skb,skb->len-32);
+                        if(skb->sk){
+                                printk(" skb->sk->sk_rcvbuf:%d",skb->sk->sk_rcvbuf);
+                        }
+                        //tcp数据区变短了 所以需要checksum重新计算
+                        unsigned int* saddr = (unsigned int*)(iph_uc+12);
+                        unsigned int* daddr = (unsigned int*)(iph_uc+16);
+                        tcph->check_sum=0;
+                        //这里开始忘了 吧iph->tlen转化,并且注意这里的iph->tlen是修改过后的
+                        tcph->check_sum = tcp_checksum((unsigned char*)tcph,ntohs(iph->tlen)-iph_len, saddr, daddr);
+                        iph->crc=0;
+                        iph->crc=checksum((unsigned short*)iph,iph_len);
+                        printk("iph->tlen:%d",ntohs(iph->tlen));
+                        printk("pkt_data_len:%d",ntohs(iph->tlen)-iph_len-tcpheader_len);            
+                        printSkb(skb);
                 }
-                //tcp数据区变短了 所以需要checksum重新计算
-                unsigned int* saddr = (unsigned int*)(iph_uc+12);
-                unsigned int* daddr = (unsigned int*)(iph_uc+16);
-                tcph->check_sum=0;
-                //这里开始忘了 吧iph->tlen转化,并且注意这里的iph->tlen是修改过后的
-                tcph->check_sum = tcp_checksum((unsigned char*)tcph,ntohs(iph->tlen)-iph_len, saddr, daddr);
-                iph->crc=0;
-                iph->crc=checksum((unsigned short*)iph,iph_len);
-                printk(" iph->tlen:%d",ntohs(iph->tlen));
-                printk("pkt_data_len:%d",ntohs(iph->tlen)-iph_len-tcpheader_len);            
-                
-            }
-            printSkb(skb);
-        
+        }
+
     }
     return NF_ACCEPT;
  }
