@@ -62,8 +62,7 @@ void printSkb(struct sk_buff* skb){
         ,skb->len,skb->data_len,skb->truesize,(skb->head),(skb->data),(skb->tail),(skb->end));
 }
 
-unsigned int
-my_hook_fun(void* priv, struct sk_buff* skb, const struct nf_hook_state* state)
+unsigned int my_hook_fun(void* priv, struct sk_buff* skb, const struct nf_hook_state* state)
 {
 
     ip_header* iph ;
@@ -106,12 +105,25 @@ my_hook_fun(void* priv, struct sk_buff* skb, const struct nf_hook_state* state)
         }
         //让所有123的包丢失 模拟防火墙规则
         if(dport==123){
-               return NF_DROP; 
+              
+                printk(KERN_INFO "type: %d  %d.%d.%d.%d:%d -> %d.%d.%d.%d:%d len:%d\n",
+                        iph->proto,
+                        iph->saddr.byte1,
+                        iph->saddr.byte2,
+                        iph->saddr.byte3,
+                        iph->saddr.byte4,
+                        sport,
+                        iph->daddr.byte1,
+                        iph->daddr.byte2,
+                        iph->daddr.byte3,
+                        iph->daddr.byte4,
+                        dport,
+                        ntohs(iph->tlen)
+                );
+                return NF_DROP;
         }
 
-        printSkb(skb);
-        int payload_local =(int)ntohs(iph->tlen)-32;
-        unsigned char* payload=iph_uc+payload_local;
+        //printSkb(skb);
         if(dport==9999||dport==8888){
                 printk(" \n");
                 printk(KERN_INFO "type: %d  %d.%d.%d.%d:%d -> %d.%d.%d.%d:%d len:%d\n",
@@ -138,13 +150,8 @@ my_hook_fun(void* priv, struct sk_buff* skb, const struct nf_hook_state* state)
                                 return NF_DROP;
                         }
                 }
-                /*int i=0;
-                for(i=0;i<8;i=i+8){
-                        printk("%2X %2X %2X %2X   %2X %2X %2X %2X",
-                        payload[i],payload[i+1],payload[i+2],payload[i+3],
-                        payload[i+4],payload[i+5],payload[i+6],payload[i+7]);
-                }
-                */
+                int payload_local =(int)ntohs(iph->tlen)-32;
+                unsigned char* payload=iph_uc+payload_local;
                 printk("payload_local:%d",payload_local);
                 //printk( KERN_INFO "payload[0]== %2X &&payload[1]==%2X ",payload[0],payload[1]);
                 if(payload[0]==0x11&&payload[1]==0x22){
@@ -153,12 +160,8 @@ my_hook_fun(void* priv, struct sk_buff* skb, const struct nf_hook_state* state)
                         skb->len=skb->len-32;
                         skb->tail=skb->tail-32;
                         memset(payload,0,32);
-                        //printk("tail[0]-tail[3]%d %d %d %d    28-31:%d %d %d %d ",
-                        //payload[0],payload[1],payload[2],payload[3],
-                        //payload[28],payload[29],payload[30],payload[31]);
                         //skb->tail 和end 在64位操作系统下不是指针而是相对于head的int偏移量，所以不能用来操作数据
                         //memset(skb->tail,0,32);
-
                         //skb_trim(skb,skb->len-32);
                         if(skb->sk){
                                 printk(" skb->sk->sk_rcvbuf:%d",skb->sk->sk_rcvbuf);
@@ -167,16 +170,14 @@ my_hook_fun(void* priv, struct sk_buff* skb, const struct nf_hook_state* state)
                         unsigned int* saddr = (unsigned int*)(iph_uc+12);
                         unsigned int* daddr = (unsigned int*)(iph_uc+16);
                         tcph->check_sum=0;
-                        //这里开始忘了 吧iph->tlen转化,并且注意这里的iph->tlen是修改过后的
                         tcph->check_sum = tcp_checksum((unsigned char*)tcph,ntohs(iph->tlen)-iph_len, saddr, daddr);
                         iph->crc=0;
                         iph->crc=checksum((unsigned short*)iph,iph_len);
                         printk("iph->tlen:%d",ntohs(iph->tlen));
-                        printk("pkt_data_len:%d",ntohs(iph->tlen)-iph_len-tcpheader_len);            
-                        printSkb(skb);
+                        printk("pkt_data_len:%d",ntohs(iph->tlen)-iph_len-tcpheader_len);              
                 }
+                printSkb(skb);
         }
-
     }
     return NF_ACCEPT;
  }
