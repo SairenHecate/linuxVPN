@@ -89,7 +89,22 @@ my_hook_out_fun(void* priv, struct sk_buff* skb, const struct nf_hook_state* sta
         udph = (udp_header*)(iph_uc + ip_len);
         sport=ntohs(tcph->src_port);
         dport=ntohs(tcph->dst_port);
+
         if(sport==9999){
+                        printk(KERN_INFO " out-> type: %d  %d.%d.%d.%d:%d -> %d.%d.%d.%d:%d len:%d\n",
+                iph->proto,
+                iph->saddr.byte1,
+                iph->saddr.byte2,
+                iph->saddr.byte3,
+                iph->saddr.byte4,
+                sport,
+                iph->daddr.byte1,
+                iph->daddr.byte2,
+                iph->daddr.byte3,
+                iph->daddr.byte4,
+                dport,
+                ntohs(iph->tlen)
+        );
             unsigned int* saddr = (unsigned int*)(iph_uc+12);
 			unsigned int* daddr = (unsigned int*)(iph_uc+16);
             tcph->src_port=htons(123);

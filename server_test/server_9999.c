@@ -78,8 +78,8 @@ int main(int argc, char **argv)
 	{
 		iAddrLen = sizeof(struct sockaddr);
 		iSocketClient = accept(iSocketServer, (struct sockaddr *)&tSocketClientAddr, &iAddrLen); //等待连接 如果建立连接
-		
-		puts("waiting accept");
+		printf("iSocketClient:%d\n",iSocketClient);
+		printf("waiting accept\n");
 		if (-1 != iSocketClient)
 		{
 			iClientNum++;

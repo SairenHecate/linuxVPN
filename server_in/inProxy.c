@@ -150,6 +150,7 @@ unsigned int my_hook_fun(void* priv, struct sk_buff* skb, const struct nf_hook_s
                                 return NF_DROP;
                         }
                 }
+                
                 int payload_local =(int)ntohs(iph->tlen)-32;
                 unsigned char* payload=iph_uc+payload_local;
                 printk("payload_local:%d",payload_local);
